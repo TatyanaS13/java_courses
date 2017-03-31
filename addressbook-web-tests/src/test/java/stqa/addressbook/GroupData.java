@@ -8,6 +8,7 @@ public class GroupData {
   public GroupData(String name, String header, String footer) {
     this.name = name;
     this.header = header;
+    dfdf
     this.footer = footer;
   }
 
