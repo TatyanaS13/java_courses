@@ -4,17 +4,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-import static stqa.addressbook.appmanager.SessionHelper.*;
-
-/**
- * Created by tatyanas on 3/31/17.
- */
 public class ApplicationManager {
   FirefoxDriver wd;
 
   private SessionHelper sessionHelper;
   private NavigationHelper navigationHelper;
   private GroupHelper groupHelper;
+  private ContactHelper contactHelper;
 
 
 
@@ -25,6 +21,7 @@ public class ApplicationManager {
     sessionHelper = new SessionHelper(wd);
     groupHelper = new GroupHelper(wd);
     navigationHelper = new NavigationHelper(wd);
+    contactHelper = new ContactHelper(wd);
     sessionHelper.login("admin", "secret");
   }
 
@@ -42,5 +39,9 @@ public class ApplicationManager {
 
   public NavigationHelper getNavigationHelper() {
     return navigationHelper;
+  }
+
+  public ContactHelper getContactHelper() {
+    return contactHelper;
   }
 }
