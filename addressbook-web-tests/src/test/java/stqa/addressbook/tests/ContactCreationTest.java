@@ -1,4 +1,4 @@
-package stqa.addressbook;
+package stqa.addressbook.tests;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
@@ -8,6 +8,7 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.*;
+import stqa.addressbook.tests.model.ContactData;
 
 public class ContactCreationTest {
   FirefoxDriver wd;
