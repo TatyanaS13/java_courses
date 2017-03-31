@@ -20,7 +20,6 @@ public class GroupCreationTest {
     wd.get("http://localhost/addressbook/index.php");
     login("admin", "secret");
   }
-  sdsdsdd
 
   private void login(String username, String password) {
     wd.findElement(By.name("user")).click();
