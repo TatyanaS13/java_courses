@@ -10,6 +10,8 @@ import stqa.addressbook.tests.model.ContactData;
 
 public class ContactHelper extends HelperBase {
 
+  private ContactData contact;
+
   public ContactHelper(WebDriver wd) {
     super(wd);
   }
@@ -55,5 +57,15 @@ public class ContactHelper extends HelperBase {
 
   public  void confirmContactDeletion(){
     confirmAlert();
+  }
+
+  public void createContact(ContactData contact) {
+    initAddNewContact();
+    fillContactForm(contact, true);
+    submitContactCreation();
+  }
+
+  public boolean isThereContact() {
+    return isElementPresent(By.name("selected[]"));
   }
 }
